@@ -155,7 +155,7 @@ int test_for_each()
 	while (a != NULL)
 	{
 		printf("obj: %p val: %d\n", a, a->i);
-		ll_next(&h, a, list);
+		a = ll_next(&h, a, list);
 	}
 
 	printf("Test ll_for_each() ----------------\n");	

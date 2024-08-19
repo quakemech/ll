@@ -27,7 +27,7 @@
 
 #define ll_first(head, item, name)		item = ll_first_(head, offsetof(typeof(*item), name))
 
-#define ll_next(head, item, name) 		item = ll_next_(head, item, offsetof(typeof(*item), name))
+#define ll_next(head, item, name) 		ll_next_(head, item, offsetof(typeof(*item), name))
 
 #define ll_for_each(head, item, name)  	for(item = ll_first_(head, offsetof(typeof(*item), name)) ; item != NULL ; item = ll_next_(head, item, offsetof(typeof(*item), name)))
 
